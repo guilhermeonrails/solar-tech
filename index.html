@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarTech Brasil - Energia Solar</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center cursor-pointer" onclick="showView('home')">
+                    <i data-lucide="sun" class="h-8 w-8 text-amber-500 mr-2"></i>
+                    <span class="text-2xl font-extrabold text-slate-800 tracking-tight">Solar<span class="text-amber-500">Tech</span></span>
+                </div>
+
+                <div class="hidden md:flex space-x-8">
+                    <button onclick="showView('home')" class="text-slate-600 hover:text-amber-500 font-semibold transition">Início</button>
+                    <button onclick="showView('shop')" class="text-slate-600 hover:text-amber-500 font-semibold transition">Loja</button>
+                    <button class="text-slate-600 hover:text-amber-500 font-semibold transition">Sobre</button>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button onclick="showView('cart')" class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-full transition" id="cart-btn">
+                        <i data-lucide="shopping-cart" class="h-6 w-6"></i>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-amber-500 text-white text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app-content"></main>
+
+    <footer class="bg-slate-900 text-slate-400 py-16 mt-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>© 2026 SolarTech Brasil Ltda. CNPJ: 00.000.000/0001-00</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
